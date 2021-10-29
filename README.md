@@ -4,6 +4,6 @@
 - Thư mục HTMLTemplate là nơi chứa các template mẫu
 - Thư mục BaiTapComponent hoặc tương tự là nơi chứa các bài tập demo trong lớp học
 
-# Bài tập React Buổi 1
+# Bài tập React Buổi 1 (Deadline 6/11/2021)
 
 - Tìm vào thư mục Homework -> tìm thư mục BaiTapReact_Buoi1
