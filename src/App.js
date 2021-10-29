@@ -4,7 +4,7 @@
 // import Profile from "./components/Profile";
 // import BaiTapComponent from "./components/BaiTapComponent/BaiTapComponent";
 import "./App.css";
-import Homework from "./components/Homework/Homework";
+import Homework from "./components/Homework/BaiTapReact_Buoi1/Homework";
 
 function App() {
   return (
