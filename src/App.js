@@ -4,7 +4,7 @@
 // import Profile from "./components/Profile";
 // import BaiTapComponent from "./components/BaiTapComponent/BaiTapComponent";
 import "./App.css";
-// import Homework from "./Homework/BaiTapReact_Buoi1/Homework";
+import Homework from "./Homework/BaiTapReact_Buoi1/Homework";
 import Databinding from "./databinding/Databinding";
 import HandleEvent from "./handleEvent/HandleEvent";
 import StateDemo from "./state/StateDemo";
@@ -19,12 +19,12 @@ function App() {
       <Profile /> */}
 
       {/* <BaiTapComponent /> */}
-      {/* <Homework /> */}
+      <Homework />
       {/* <Databinding />
       <HandleEvent /> */}
       {/* <StateDemo /> */}
       {/* <Style /> */}
-      <Example />
+      {/* <Example /> */}
     </div>
   );
 }
