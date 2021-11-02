@@ -20,7 +20,6 @@ export default class Homework extends Component {
             <Body />
           </div>
         </div>
-
         {/* Footer */}
         <div className="py-5 bg-dark">
           <div className="container">
