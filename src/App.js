@@ -10,6 +10,7 @@ import HandleEvent from "./handleEvent/HandleEvent";
 import StateDemo from "./state/StateDemo";
 import Style from "./Style/Style";
 import Example from "./state/Example";
+import BaiTapChonXe from "./Homework/BaiTapReact_Buoi2/BaiTapChonXe";
 
 function App() {
   return (
@@ -19,12 +20,15 @@ function App() {
       <Profile /> */}
 
       {/* <BaiTapComponent /> */}
-      <Homework />
+      {/* <Homework /> */}
       {/* <Databinding />
       <HandleEvent /> */}
       {/* <StateDemo /> */}
       {/* <Style /> */}
       {/* <Example /> */}
+
+      {/* React Buổi 2 - Bài tập chọn màu xe hơi */}
+      <BaiTapChonXe />
     </div>
   );
 }
