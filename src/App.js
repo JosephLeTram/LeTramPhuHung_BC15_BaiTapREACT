@@ -11,10 +11,14 @@ import StateDemo from "./state/StateDemo";
 import Style from "./Style/Style";
 import Example from "./state/Example";
 import BaiTapChonXe from "./Homework/BaiTapReact_Buoi2/BaiTapChonXe";
+import RenderWithMap from "./RenderWithMap/RenderWithMap";
+import DemoProps from "./Props/DemoProps/DemoProps";
+import BaiTapThuKinh from "./Homework/BaiTapReact_Glasses/BaiTapThuKinh";
+import DanhSachSanPham from "./Props/DanhSachSanPham/DanhSachSanPham";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       {/* <Nav />
       <Card />
       <Profile /> */}
@@ -28,7 +32,14 @@ function App() {
       {/* <Example /> */}
 
       {/* React Buổi 2 - Bài tập chọn màu xe hơi */}
-      <BaiTapChonXe />
+      {/* <BaiTapChonXe /> */}
+
+      {/* <RenderWithMap /> */}
+
+      {/* <DemoProps /> */}
+      {/* <BaiTapThuKinh /> */}
+
+      <DanhSachSanPham />
     </div>
   );
 }
