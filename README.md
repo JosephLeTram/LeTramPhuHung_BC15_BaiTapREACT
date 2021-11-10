@@ -11,3 +11,7 @@
 # Bài tập React Buổi 2 -Chọn màu xe (Deadline 5/11/2021)
 
 - Tìm vào thư mục Homework -> tìm thư mục BaiTapReact_Buoi2
+
+# Bài tập React Buổi 5 - Bài Tập Thử Kính (Deadline 12/11/2021)
+
+- Tìm vào thư mục Homework -> tìm thư mục BaiTapReact_Glasses
