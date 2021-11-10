@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import Glasses from "./Glasses";
-import Woman from "./Woman";
 
 export default class BaiTapThuKinh extends Component {
   arrGlasses = [
@@ -69,19 +67,129 @@ export default class BaiTapThuKinh extends Component {
     },
   ];
 
+  state = {
+    glassesCurrent: {
+      id: 1,
+      price: 30,
+      name: "GUCCI G8850U",
+      url: "./glassesImage/v1.png",
+      desc: "Light pink square lenses define these sunglasses, ending with amother of pearl effect tip. ",
+    },
+  };
+
+  renderGlassesList = () => {
+    return this.arrGlasses.map((glassItem, index) => {
+      return (
+        <img
+          key={index}
+          src={glassItem.url}
+          alt=""
+          style={{ width: "96px", cursor: "pointer" }}
+          className="ml-2 p-2 border border-width-1"
+          onClick={() => {
+            this.changeGlass(glassItem);
+          }}
+        />
+      );
+    });
+  };
+
+  changeGlass = (newGlass) => {
+    this.setState({
+      glassesCurrent: newGlass,
+    });
+  };
+
   render() {
+    const glassesCurrent = this.state.glassesCurrent;
+    const keyFrames = `@keyframes glassChangeAnimation${Date.now()} {
+      from {width:0px;
+        transform:  rotate(45deg);
+        opacity:0;
+      }
+      to {width: 150px; transform:rotate(0deg); opacity: 0.7;}
+    }`;
+    const styleGlasses = {
+      position: "absolute",
+      width: "150px",
+      top: "75px",
+      left: "150px",
+      opacity: "0.7",
+      transform: "rotate(0deg)",
+      animation: `glassChangeAnimation${Date.now()} 1.5s`,
+    };
+    const styleDesc = {
+      position: "absolute",
+      width: "55%",
+      bottom: "16px",
+      left: "100px",
+      backgroundColor: "rgba(79,79,79, 0.6)",
+    };
+
+    // Render Animation
+
     return (
-      <div className>
-        <div className="bg-dark text-white text-center display-5">
-          Bài Tập Thử Kính Online
-        </div>
+      <div
+        style={{
+          backgroundImage: "url(./glassesImage/background.jpg)",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backGroundPosition: "center",
+        }}
+      >
+        <style>{keyFrames}</style>
+        <div
+          style={{ backgroundColor: "rgba(0,0,0,0.8)", minHeight: "2000px" }}
+        >
+          <h3
+            style={{ backgroundColor: "rgba(139,0,139, 0.3)" }}
+            className=" text-white text-center display-5 p-2"
+          >
+            Bài Tập Thử Kính Online
+          </h3>
 
-        <div className="container text-center">
-          <Woman style={{ position: "relative" }} />
-          <Glasses style={{ position: "absolute" }} />
+          {/* DIv chứa hình người mẫu */}
+          <div className="container text-center mt-5">
+            <div className="row">
+              <div className="col-6">
+                <div className="position-relative">
+                  <img
+                    src="./glassesImage/model.jpg"
+                    alt="model"
+                    height="300"
+                    width="250"
+                  />
 
-          <div>
-            <Glasses />
+                  {/* data binding để xử lý chuyển đối state */}
+                  <img
+                    src={glassesCurrent.url}
+                    alt="glasses"
+                    style={styleGlasses}
+                    className="changeAnimation"
+                  />
+                  <div style={styleDesc}>
+                    <p style={{ fontSize: "18px", fontWeight: "bold" }}>
+                      {glassesCurrent.name}
+                    </p>
+                    <p style={{ fontSize: "12px", color: "white" }}>
+                      {glassesCurrent.desc}
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="col-6">
+                <img
+                  src="./glassesImage/model.jpg"
+                  alt="model"
+                  height="300"
+                  width="250"
+                />
+              </div>
+            </div>
+          </div>
+          {/*  Div chứa các kính  */}
+          <div className="container bg-light mt-5 p-5 text-center d-flex justify-content-around">
+            {this.renderGlassesList()}
           </div>
         </div>
       </div>

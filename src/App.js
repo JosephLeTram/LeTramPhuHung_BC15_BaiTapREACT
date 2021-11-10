@@ -37,9 +37,9 @@ function App() {
       {/* <RenderWithMap /> */}
 
       {/* <DemoProps /> */}
-      {/* <BaiTapThuKinh /> */}
-
-      <DanhSachSanPham />
+      <BaiTapThuKinh />
+      {/* 
+      <DanhSachSanPham /> */}
     </div>
   );
 }
