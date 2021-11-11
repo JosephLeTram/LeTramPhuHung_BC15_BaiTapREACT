@@ -2,7 +2,8 @@ import React, { Component } from "react";
 
 export default class GioHang extends Component {
   render() {
-    let { gioHang } = this.props;
+    let { gioHang, xoa, tangGiamSoLuong } = this.props;
+
     return (
       <table className="table">
         <thead>
@@ -24,10 +25,35 @@ export default class GioHang extends Component {
                 </td>
                 <td>{spGH.tenSP}</td>
                 <td>{spGH.giaBan}</td>
+                <td>
+                  <button
+                    className="btn btn-primary mr-2"
+                    onClick={() => {
+                      tangGiamSoLuong(spGH.maSP, 1);
+                    }}
+                  >
+                    +
+                  </button>
+                  <button
+                    className="btn btn-primary mr-2"
+                    onClick={() => {
+                      tangGiamSoLuong(spGH.maSP, -1);
+                    }}
+                  >
+                    -
+                  </button>
+                </td>
                 <td>{spGH.soLuong}</td>
                 <td>{spGH.giaBan * spGH.soLuong}</td>
                 <td>
-                  <button className="btn btn-danger">Xóa</button>
+                  <button
+                    className="btn btn-danger"
+                    onClick={() => {
+                      xoa(spGH.maSP);
+                    }}
+                  >
+                    Xóa
+                  </button>
                 </td>
               </tr>
             );

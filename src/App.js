@@ -15,6 +15,7 @@ import RenderWithMap from "./RenderWithMap/RenderWithMap";
 import DemoProps from "./Props/DemoProps/DemoProps";
 import BaiTapThuKinh from "./Homework/BaiTapReact_Glasses/BaiTapThuKinh";
 import DanhSachSanPham from "./Props/DanhSachSanPham/DanhSachSanPham";
+import BaiTapGioHangRedux from "./DemoRedux/BaiTapGioHangRedux/BaiTapGioHangRedux";
 
 function App() {
   return (
@@ -35,11 +36,13 @@ function App() {
       {/* <BaiTapChonXe /> */}
 
       {/* <RenderWithMap /> */}
-
       {/* <DemoProps /> */}
-      <BaiTapThuKinh />
-      {/* 
-      <DanhSachSanPham /> */}
+
+      {/* React Buổi 5 - Bài Tập Thử Kính online */}
+      {/* <BaiTapThuKinh /> */}
+
+      {/* <DanhSachSanPham /> */}
+      <BaiTapGioHangRedux />
     </div>
   );
 }

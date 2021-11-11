@@ -66,11 +66,83 @@ export default class DanhSachSanPham extends Component {
     ],
   };
 
+  // State tại đâu thì hàm xử lý setState sẽ được đặt tại đó
+  themGioHang = (sanPhamClick) => {
+    // console.log(sanPhamClick);
+
+    // tạo ra sp giỏ hàng
+    let spGH = { ...sanPhamClick, soLuong: 1 };
+
+    // console.log("spGH", spGH);
+
+    // Lấy state giỏ hàng ra thêm sản phẩm này vào
+
+    let gioHangCapNhat = this.state.gioHang;
+
+    // Kiểm tra sản phẩn đó đã có trong giở hàng hay chưa
+    let sanPhamGioHang = gioHangCapNhat.find((sp) => sp.maSP === spGH.maSP);
+
+    //Nếu sản phẩm đã có trong giở hàng rồi
+    if (sanPhamGioHang) {
+      sanPhamGioHang.soLuong += 1;
+    } else {
+      gioHangCapNhat.push(spGH);
+    }
+
+    // setState giỏ hàng
+
+    this.setState({
+      gioHang: gioHangCapNhat,
+    });
+  };
+
+  // Xóa giở hàng
+  xoaSanPham = (maSPClick) => {
+    // console.log(maSPClick);
+
+    // // Xử lý xóa
+    // // Tìm ra vị trí sản phẩm đó trong mảng
+    // let index = this.state.gioHang.findIndex((sp) => sp.maSP === maSPClick);
+    // if (index !== -1) {
+    //   // Xử lý xóa dựa vào index
+    //   this.state.gioHang.splice(index, 1);
+    // }
+
+    let gioHangCapNhat = this.state.gioHang.filter(
+      (sp) => sp.maSP !== maSPClick
+    );
+
+    this.setState({
+      gioHang: gioHangCapNhat,
+    });
+  };
+
+  //tăng giảm số lượng
+  tangGiamSoLuong = (sanPham, soLuong) => {
+    // +1 là tăng -1 là giam
+    let sanPhamGioHang = this.state.gioHang.find((sp) => sp.maSP === sanPham);
+    if (sanPhamGioHang) {
+      sanPhamGioHang.soLuong += soLuong;
+      if (sanPhamGioHang.soLuong < 1) {
+        sanPhamGioHang.soLuong -= soLuong;
+        alert("Sản phẩm tối thiểu là 1");
+      }
+    }
+
+    this.setState({
+      gioHang: this.state.gioHang,
+    });
+  };
+
   renderSanPham = () => {
     return this.mangDienThoai.map((sanPham, index) => {
       return (
         <div className="col-4" key={index}>
-          <SanPham sanPham={sanPham} hamXemChiTiet={this.xemChiTiet} />
+          <SanPham
+            themGioHang={this.themGioHang}
+            sanPham={sanPham}
+            hamXemChiTiet={this.xemChiTiet}
+          />
           {/* <div className="card">
             <img src={sanPham.hinhAnh} alt="san pham" height={350} />
             <div className="card-body bg-dark text-white">
@@ -118,7 +190,11 @@ export default class DanhSachSanPham extends Component {
           </span>
         </div>
         <div>
-          <GioHang gioHang={this.state.gioHang} />
+          <GioHang
+            gioHang={this.state.gioHang}
+            xoa={this.xoaSanPham}
+            tangGiamSoLuong={this.tangGiamSoLuong}
+          />
         </div>
 
         <h3 className="text-center display-4"> Danh Sách Sản Phẩm</h3>
