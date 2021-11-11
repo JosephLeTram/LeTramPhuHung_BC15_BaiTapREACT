@@ -113,16 +113,16 @@ export default class BaiTapThuKinh extends Component {
       position: "absolute",
       width: "150px",
       top: "75px",
-      left: "150px",
+      left: "195px",
       opacity: "0.7",
       transform: "rotate(0deg)",
       animation: `glassChangeAnimation${Date.now()} 1.5s`,
     };
     const styleDesc = {
       position: "absolute",
-      width: "55%",
+      width: "47%",
       bottom: "16px",
-      left: "100px",
+      left: "143px",
       backgroundColor: "rgba(79,79,79, 0.6)",
     };
 
