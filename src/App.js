@@ -16,6 +16,7 @@ import DemoProps from "./Props/DemoProps/DemoProps";
 import BaiTapThuKinh from "./Homework/BaiTapReact_Glasses/BaiTapThuKinh";
 import DanhSachSanPham from "./Props/DanhSachSanPham/DanhSachSanPham";
 import BaiTapGioHangRedux from "./DemoRedux/BaiTapGioHangRedux/BaiTapGioHangRedux";
+import BaiTapGameXucXac from "./Homework/BaiTapRedux_Dice/BaiTapGameXucXac";
 
 function App() {
   return (
@@ -42,7 +43,9 @@ function App() {
       {/* <BaiTapThuKinh /> */}
 
       {/* <DanhSachSanPham /> */}
-      <BaiTapGioHangRedux />
+      {/* <BaiTapGioHangRedux /> */}
+
+      <BaiTapGameXucXac />
     </div>
   );
 }
