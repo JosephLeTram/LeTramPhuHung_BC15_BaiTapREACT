@@ -17,6 +17,7 @@ import BaiTapThuKinh from "./Homework/BaiTapReact_Glasses/BaiTapThuKinh";
 import DanhSachSanPham from "./Props/DanhSachSanPham/DanhSachSanPham";
 import BaiTapGioHangRedux from "./DemoRedux/BaiTapGioHangRedux/BaiTapGioHangRedux";
 import BaiTapGameXucXac from "./Homework/BaiTapRedux_Dice/BaiTapGameXucXac";
+import BaiTapQuanLyNguoiDung from "./ReactForm/BaiTapQuanLyNguoiDung";
 
 function App() {
   return (
@@ -45,7 +46,10 @@ function App() {
       {/* <DanhSachSanPham /> */}
       {/* <BaiTapGioHangRedux /> */}
 
-      <BaiTapGameXucXac />
+      {/* <BaiTapGameXucXac /> */}
+
+      {/* React Buổi 8 */}
+      <BaiTapQuanLyNguoiDung />
     </div>
   );
 }
