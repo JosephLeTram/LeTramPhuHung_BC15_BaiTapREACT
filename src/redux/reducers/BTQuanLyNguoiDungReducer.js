@@ -1,8 +1,10 @@
+import { XOA_NGUOI_DUNG } from "../types/BTQuanlyNguoiDungTypes";
+
 const stateDefault = {
   mangNguoiDung: [
     {
       taiKhoan: "nguyenvana",
-      hoten: "Nguyên Vẵn A",
+      hoTen: "Nguyên Vẵn A",
       matKhau: "123",
       soDienThoai: "12345667",
       email: "nguyenvana@gmail.com",
@@ -10,13 +12,22 @@ const stateDefault = {
     },
     {
       taiKhoan: "nguyenvanb",
-      hoten: "Nguyên Vẵn B",
+      hoTen: "Nguyên Vẵn B",
       matKhau: "321",
       soDienThoai: "76543421",
       email: "nguyenvanb@gmail.com",
       maLoaiNguoiDung: "QuanTri",
     },
   ],
+
+  nguoiDungChinhSua: {
+    taiKhoan: "",
+    hoTen: "",
+    matKhau: "",
+    soDienThoai: "",
+    email: "",
+    maLoaiNguoiDung: "",
+  },
 };
 
 export const BTQuanLyNguoiDungReducer = (state = stateDefault, action) => {
@@ -26,6 +37,22 @@ export const BTQuanLyNguoiDungReducer = (state = stateDefault, action) => {
 
       return { ...state };
     }
+
+    case XOA_NGUOI_DUNG: {
+      state.mangNguoiDung = [
+        ...state.mangNguoiDung.filter(
+          (nguoiDung) => nguoiDung.taiKhoan !== action.taiKhoan
+        ),
+      ];
+
+      return { ...state };
+    }
+
+    case "CHINH_SUA_NGUOI_DUNG": {
+      state.nguoiDungChinhSua = action.nguoiDung;
+      return { ...state };
+    }
+
     default:
       return state;
   }

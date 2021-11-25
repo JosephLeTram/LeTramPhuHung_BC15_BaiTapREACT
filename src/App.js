@@ -18,6 +18,7 @@ import DanhSachSanPham from "./Props/DanhSachSanPham/DanhSachSanPham";
 import BaiTapGioHangRedux from "./DemoRedux/BaiTapGioHangRedux/BaiTapGioHangRedux";
 import BaiTapGameXucXac from "./Homework/BaiTapRedux_Dice/BaiTapGameXucXac";
 import BaiTapQuanLyNguoiDung from "./ReactForm/BaiTapQuanLyNguoiDung";
+import LifeCycle from "./LifeCycle/LifeCycle";
 
 function App() {
   return (
@@ -50,6 +51,7 @@ function App() {
 
       {/* React Buổi 8 */}
       <BaiTapQuanLyNguoiDung />
+      {/* <LifeCycle /> */}
     </div>
   );
 }

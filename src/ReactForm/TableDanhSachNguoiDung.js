@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { xoaNguoiDungAction } from "../redux/actions/BTQuanLyNguoiDungAction";
 
 class TableDanhSachNguoiDung extends Component {
   render() {
@@ -34,10 +35,33 @@ class TableDanhSachNguoiDung extends Component {
                     <td>{nguoiDung.soDienThoai}</td>
                     <td>{nguoiDung.maLoaiNguoiDung}</td>
                     <td>
-                      <button className="btn btn-primary mr-2">
-                        Chỉnh Sửa
-                      </button>
-                      <button className="btn btn-danger">Xóa</button>
+                      <div className="d-flex justify-content-between">
+                        <button
+                          className="btn btn-primary mr-1"
+                          onClick={() => {
+                            const action = {
+                              type: "CHINH_SUA_NGUOI_DUNG",
+                              nguoiDung: nguoiDung,
+                            };
+                            this.props.dispatch(action);
+                          }}
+                        >
+                          Chỉnh Sửa
+                        </button>
+                        <button
+                          className="btn btn-danger"
+                          onClick={() => {
+                            // action creator
+                            const action = xoaNguoiDungAction(
+                              nguoiDung.taiKhoan
+                            );
+                            // Gửi dữ liệu lên redux
+                            this.props.dispatch(action);
+                          }}
+                        >
+                          Xóa
+                        </button>
+                      </div>
                     </td>
                   </tr>
                 );
