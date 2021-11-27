@@ -19,6 +19,8 @@ import BaiTapGioHangRedux from "./DemoRedux/BaiTapGioHangRedux/BaiTapGioHangRedu
 import BaiTapGameXucXac from "./Homework/BaiTapRedux_Dice/BaiTapGameXucXac";
 import BaiTapQuanLyNguoiDung from "./ReactForm/BaiTapQuanLyNguoiDung";
 import LifeCycle from "./LifeCycle/LifeCycle";
+import BaiTapGameOanTuTi from "./Homework/BaiTapRedux_OanTuTi/BaiTapGameOanTuTi";
+import BaiTapDatVePhim from "./Homework/BaiTapRedux_DatVePhim/BaiTapDatVePhim";
 
 function App() {
   return (
@@ -50,8 +52,11 @@ function App() {
       {/* <BaiTapGameXucXac /> */}
 
       {/* React Buổi 8 */}
-      <BaiTapQuanLyNguoiDung />
+      {/* <BaiTapQuanLyNguoiDung /> */}
       {/* <LifeCycle /> */}
+
+      {/* <BaiTapGameOanTuTi /> */}
+      <BaiTapDatVePhim />
     </div>
   );
 }

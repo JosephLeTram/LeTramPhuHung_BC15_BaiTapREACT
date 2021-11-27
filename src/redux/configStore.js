@@ -2,6 +2,8 @@ import { combineReducers, createStore } from "redux";
 import { gioHangReducer } from "./reducers/gioHangReducer";
 import { gameXucXacReducer } from "./reducers/gameXucXacReducer";
 import { BTQuanLyNguoiDungReducer } from "./reducers/BTQuanLyNguoiDungReducer";
+import { gameOanTuTiReducer } from "./reducers/gameOanTuTiReducer";
+import { BTDatVeReducer } from "./reducers/BTDatVeReducer";
 
 const rootReducer = combineReducers({
   // Nơi chứa toàn bộ state của ứng dụng (Thay vì đặt dưới this.state của component)
@@ -11,6 +13,10 @@ const rootReducer = combineReducers({
   gameXucXacReducer,
 
   BTQuanLyNguoiDungReducer,
+
+  gameOanTuTiReducer,
+
+  BTDatVeReducer,
 
   // ....stateBaiTap:
 });
