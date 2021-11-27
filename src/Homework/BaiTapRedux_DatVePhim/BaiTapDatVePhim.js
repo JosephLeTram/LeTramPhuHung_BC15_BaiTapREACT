@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import "./BaiTapBookingTicket.css";
 import ThongTinDatGhe from "./ThongTinDatGhe";
 import danhSachGheData from "../../Data/danhSachGhe.json";
