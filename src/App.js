@@ -22,42 +22,67 @@ import LifeCycle from "./LifeCycle/LifeCycle";
 import BaiTapGameOanTuTi from "./Homework/BaiTapRedux_OanTuTi/BaiTapGameOanTuTi";
 import BaiTapDatVePhim from "./Homework/BaiTapRedux_DatVePhim/BaiTapDatVePhim";
 
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import HeaderHome from "./components/HeaderHome/HeaderHome";
+import DemoUseState from "./pages/Hooks/DemoUseState";
+import BaiTapUseState from "./pages/Hooks/BaiTapUseState";
+import DemoUseEffect from "./pages/Hooks/DemoUseEffect";
+
 function App() {
   return (
-    <div>
+    <BrowserRouter>
+      {/* <div> */}
       {/* <Nav />
-      <Card />
-      <Profile /> */}
-
+        <Card />
+        <Profile /> */}
       {/* <BaiTapComponent /> */}
       {/* <Homework /> */}
       {/* <Databinding />
-      <HandleEvent /> */}
+        <HandleEvent /> */}
       {/* <StateDemo /> */}
       {/* <Style /> */}
       {/* <Example /> */}
-
       {/* React Buổi 2 - Bài tập chọn màu xe hơi */}
       {/* <BaiTapChonXe /> */}
-
       {/* <RenderWithMap /> */}
       {/* <DemoProps /> */}
-
       {/* React Buổi 5 - Bài Tập Thử Kính online */}
       {/* <BaiTapThuKinh /> */}
-
       {/* <DanhSachSanPham /> */}
       {/* <BaiTapGioHangRedux /> */}
-
       {/* <BaiTapGameXucXac /> */}
-
       {/* React Buổi 8 */}
       {/* <BaiTapQuanLyNguoiDung /> */}
       {/* <LifeCycle /> */}
-
       {/* <BaiTapGameOanTuTi /> */}
-      <BaiTapDatVePhim />
-    </div>
+      {/* <BaiTapDatVePhim /> */}
+      {/* </div> */}
+
+      {/* React - Router - Hooks */}
+      {/*  Cách 2 để render ra nội dung trên trang */}
+      {/* <Route path="/demo" render ={(propsRoute) =>{
+        return <div>
+
+        </div>
+      }}/> */}
+
+      {/* Cách 1 */}
+      <HeaderHome />
+      <Switch>
+        {/* Trang chủ được load mặc định */}
+        <Route exact path="/" component={HomePage} />
+        {/* Những trang khác */}
+        <Route exact path="/home" component={HomePage} />
+        <Route exact path="/about" component={About} />
+        <Route exact path="/contact" component={Contact} />
+        <Route exact path="/usestate" component={DemoUseState} />
+        <Route exact path="/baitapusestate" component={BaiTapUseState} />
+        <Route exact path="/demouseeffect" component={DemoUseEffect} />
+      </Switch>
+    </BrowserRouter>
   );
 }
 

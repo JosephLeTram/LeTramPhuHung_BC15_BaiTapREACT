@@ -9,7 +9,7 @@ class FormDangKy extends Component {
       hoTen: "",
       email: "",
       soDienThoai: "",
-      maLoaiNguoiDung: "KhachHang",
+      maLoaiNguoiDung: "",
     },
     errors: {
       // Chứa những thông tin lỗi
@@ -123,7 +123,7 @@ class FormDangKy extends Component {
 
   render() {
     let { taiKhoan, matKhau, hoTen, email, soDienThoai, maLoaiNguoiDung } =
-      this.props.nguoiDungChinhSua;
+      this.state.values;
     return (
       <form onSubmit={this.handleSubmit} className="card">
         <div className="card-header bg-dark text-white">
@@ -211,7 +211,19 @@ class FormDangKy extends Component {
                 <button type="submit" className="btn btn-success mr-3">
                   Đăng Ký
                 </button>
-                <button type="button" className="btn btn-primary">
+                <button
+                  type="button"
+                  className="btn btn-primary"
+                  onClick={() => {
+                    const action = {
+                      type: "CAP_NHAT_NGUOI_DUNG",
+                      nguoiDung: this.state.values,
+                    };
+
+                    // Đưa dữ liệu cập nhật người dùng lên redux
+                    this.props.dispatch(action);
+                  }}
+                >
                   Cập Nhật
                 </button>
               </div>

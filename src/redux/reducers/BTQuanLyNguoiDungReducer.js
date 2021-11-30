@@ -53,6 +53,23 @@ export const BTQuanLyNguoiDungReducer = (state = stateDefault, action) => {
       return { ...state };
     }
 
+    case "CAP_NHAT_NGUOI_DUNG": {
+      //lấy dữ liệu người dùng trong mảng ra
+      let nguoiDung = state.mangNguoiDung.find(
+        (nd) => nd.taiKhoan === action.nguoiDung.taiKhoan
+      );
+
+      if (nguoiDung) {
+        for (let key in action.nguoiDung) {
+          nguoiDung[key] = action.nguoiDung[key];
+        }
+      }
+
+      state.mangNguoiDung = [...state.mangNguoiDung];
+
+      return { ...state };
+    }
+
     default:
       return state;
   }
