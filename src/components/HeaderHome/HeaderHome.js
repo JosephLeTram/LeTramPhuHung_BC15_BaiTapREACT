@@ -54,6 +54,15 @@ export default function HeaderHome(props) {
               <NavLink className="dropdown-item text-dark" to="/demouseeffect">
                 Demo Use Effect
               </NavLink>
+              <NavLink className="dropdown-item text-dark" to="/demousememo">
+                Demo Use Memo
+              </NavLink>
+              <NavLink className="dropdown-item text-dark" to="/demouseref">
+                Demo Use Ref
+              </NavLink>
+              <NavLink className="dropdown-item text-dark" to="/demohookredux">
+                Demo Hook Redux
+              </NavLink>
             </div>
           </li>
         </ul>

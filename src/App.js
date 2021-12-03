@@ -30,6 +30,9 @@ import HeaderHome from "./components/HeaderHome/HeaderHome";
 import DemoUseState from "./pages/Hooks/DemoUseState";
 import BaiTapUseState from "./pages/Hooks/BaiTapUseState";
 import DemoUseEffect from "./pages/Hooks/DemoUseEffect";
+import DemoUseMemo from "./pages/Hooks/DemoUseMemo/DemoUseMemo";
+import DemoUseRef from "./pages/Hooks/UseRef/DemoUseRef";
+import DemoHookRedux from "./pages/Hooks/DemoHookRedux/DemoHookRedux";
 
 function App() {
   return (
@@ -81,6 +84,9 @@ function App() {
         <Route exact path="/usestate" component={DemoUseState} />
         <Route exact path="/baitapusestate" component={BaiTapUseState} />
         <Route exact path="/demouseeffect" component={DemoUseEffect} />
+        <Route exact path="/demousememo" component={DemoUseMemo} />
+        <Route exact path="/demouseref" component={DemoUseRef} />
+        <Route exact path="/demohookredux" component={DemoHookRedux} />
       </Switch>
     </BrowserRouter>
   );
