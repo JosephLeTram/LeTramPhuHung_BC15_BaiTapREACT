@@ -65,6 +65,29 @@ export default function HeaderHome(props) {
               </NavLink>
             </div>
           </li>
+          <li className="nav-item dropdown">
+            <NavLink
+              className="nav-link dropdown-toggle"
+              to="#"
+              id="dropdownId"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              API
+            </NavLink>
+            <div className="dropdown-menu" aria-labelledby="dropdownId">
+              <NavLink className="dropdown-item text-dark" to="/democlassapi">
+                Demo Class Component API
+              </NavLink>
+              <NavLink className="dropdown-item text-dark" to="/demofuncapi">
+                Demo Function Component API
+              </NavLink>
+              <NavLink className="dropdown-item text-dark" to="/middleware">
+                MIddle Ware Redux
+              </NavLink>
+            </div>
+          </li>
         </ul>
         <form className="form-inline my-2 my-lg-0">
           <input

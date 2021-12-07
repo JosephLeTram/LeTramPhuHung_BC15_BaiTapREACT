@@ -33,6 +33,9 @@ import DemoUseEffect from "./pages/Hooks/DemoUseEffect";
 import DemoUseMemo from "./pages/Hooks/DemoUseMemo/DemoUseMemo";
 import DemoUseRef from "./pages/Hooks/UseRef/DemoUseRef";
 import DemoHookRedux from "./pages/Hooks/DemoHookRedux/DemoHookRedux";
+import ClassApi from "./pages/DemoApi/ClassApi";
+import FuncApi from "./pages/DemoApi/FuncApi";
+import MiddleWareRedux from "./pages/DemoApi/MiddleWareRedux";
 
 function App() {
   return (
@@ -87,6 +90,9 @@ function App() {
         <Route exact path="/demousememo" component={DemoUseMemo} />
         <Route exact path="/demouseref" component={DemoUseRef} />
         <Route exact path="/demohookredux" component={DemoHookRedux} />
+        <Route exact path="/democlassapi" component={ClassApi} />
+        <Route exact path="/demofuncapi" component={FuncApi} />
+        <Route exact path="/middleware" component={MiddleWareRedux} />
       </Switch>
     </BrowserRouter>
   );
