@@ -1,15 +1,19 @@
 import axios from "axios";
 
-export const getApiPhimAction = (dispatch) => {
-  let promise = axios({
-    url: "http://movieapi.cyberlearn.vn/api/QuanLyPhim/LayDanhSachPhim?maNhom=GP01",
-    method: "GET",
-  });
+// closure function
 
-  promise.then((result) => {
-    dispatch({
-      type: "GET_API_PHIM",
-      data: result.data.content,
+export const getApiPhimAction = (maNhom = "GP01") => {
+  return (dispatch) => {
+    let promise = axios({
+      url: `http://movieapi.cyberlearn.vn/api/QuanLyPhim/LayDanhSachPhim?maNhom=${maNhom}`,
+      method: "GET",
     });
-  });
+
+    promise.then((result) => {
+      dispatch({
+        type: "GET_API_PHIM",
+        data: result.data.content,
+      });
+    });
+  };
 };

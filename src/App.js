@@ -36,6 +36,9 @@ import DemoHookRedux from "./pages/Hooks/DemoHookRedux/DemoHookRedux";
 import ClassApi from "./pages/DemoApi/ClassApi";
 import FuncApi from "./pages/DemoApi/FuncApi";
 import MiddleWareRedux from "./pages/DemoApi/MiddleWareRedux";
+import Login from "./pages/Hooks/Login";
+import Register from "./pages/Hooks/Register";
+import Detail from "./pages/Detail";
 
 function App() {
   return (
@@ -93,6 +96,9 @@ function App() {
         <Route exact path="/democlassapi" component={ClassApi} />
         <Route exact path="/demofuncapi" component={FuncApi} />
         <Route exact path="/middleware" component={MiddleWareRedux} />
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/register" component={Register} />
+        <Route exact path="/detail/:maPhim" component={Detail} />
       </Switch>
     </BrowserRouter>
   );

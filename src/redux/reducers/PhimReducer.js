@@ -1,5 +1,12 @@
 const stateDefault = {
-  mangPhim: [],
+  mangPhim: [
+    {
+      maPhim: 1,
+      tenPhim: "Movie Name",
+      hinhAnh: "https://i.pravatar.cc/250",
+      moTa: "Description",
+    },
+  ],
 };
 
 export const PhimReducer = (state = stateDefault, action) => {
