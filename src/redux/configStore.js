@@ -6,6 +6,7 @@ import { gameOanTuTiReducer } from "./reducers/gameOanTuTiReducer";
 import { BTDatVeReducer } from "./reducers/BTDatVeReducer";
 import { FacebookAppReducer } from "./reducers/FacebookAppReducer";
 import { PhimReducer } from "./reducers/PhimReducer";
+import { QuanLyNguoiDungReducer } from "./reducers/QuanLyNguoiDungReducer";
 import reduxThunk from "redux-thunk";
 
 const rootReducer = combineReducers({
@@ -24,6 +25,8 @@ const rootReducer = combineReducers({
   FacebookAppReducer,
 
   PhimReducer,
+
+  QuanLyNguoiDungReducer,
 
   // ....stateBaiTap:
 });

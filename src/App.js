@@ -22,7 +22,7 @@ import LifeCycle from "./LifeCycle/LifeCycle";
 import BaiTapGameOanTuTi from "./Homework/BaiTapRedux_OanTuTi/BaiTapGameOanTuTi";
 import BaiTapDatVePhim from "./Homework/BaiTapRedux_DatVePhim/BaiTapDatVePhim";
 
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Router } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -39,6 +39,10 @@ import MiddleWareRedux from "./pages/DemoApi/MiddleWareRedux";
 import Login from "./pages/Hooks/Login";
 import Register from "./pages/Hooks/Register";
 import Detail from "./pages/Detail";
+
+// Cấu hình history
+import { createBrowserHistory } from "history";
+export const history = createBrowserHistory();
 
 function App() {
   return (

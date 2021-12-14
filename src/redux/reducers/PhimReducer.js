@@ -7,12 +7,19 @@ const stateDefault = {
       moTa: "Description",
     },
   ],
+
+  chiTietLichChieuPhim: {},
 };
 
 export const PhimReducer = (state = stateDefault, action) => {
   switch (action.type) {
     case "GET_API_PHIM": {
       state.mangPhim = action.data;
+      return { ...state };
+    }
+
+    case "GET_CHI_TIET_PHIM_LICH_CHIEU": {
+      state.chiTietLichChieuPhim = action.data;
       return { ...state };
     }
     default:
