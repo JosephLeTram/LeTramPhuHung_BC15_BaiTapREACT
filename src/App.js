@@ -42,6 +42,11 @@ import Detail from "./pages/Detail";
 
 // Cấu hình history
 import { createBrowserHistory } from "history";
+import HOC from "./pages/HOC/HOC";
+import Modal from "./pages/HOC/Modal";
+import { HomeTemplate } from "./templates/HomeTemplate";
+import { UserTemplate } from "./templates/UserTemplate";
+import HomeMobile from "./pages/Home/HomeMobile";
 export const history = createBrowserHistory();
 
 function App() {
@@ -83,26 +88,38 @@ function App() {
       }}/> */}
 
       {/* Cách 1 */}
-      <HeaderHome />
+      {/* <HeaderHome /> */}
+      <Modal />
       <Switch>
         {/* Trang chủ được load mặc định */}
-        <Route exact path="/" component={HomePage} />
+        <HomeTemplate
+          exact
+          path="/"
+          Component={HomePage}
+          MobileComponent={HomeMobile}
+        />
         {/* Những trang khác */}
-        <Route exact path="/home" component={HomePage} />
-        <Route exact path="/about" component={About} />
-        <Route exact path="/contact" component={Contact} />
-        <Route exact path="/usestate" component={DemoUseState} />
-        <Route exact path="/baitapusestate" component={BaiTapUseState} />
-        <Route exact path="/demouseeffect" component={DemoUseEffect} />
-        <Route exact path="/demousememo" component={DemoUseMemo} />
-        <Route exact path="/demouseref" component={DemoUseRef} />
-        <Route exact path="/demohookredux" component={DemoHookRedux} />
-        <Route exact path="/democlassapi" component={ClassApi} />
-        <Route exact path="/demofuncapi" component={FuncApi} />
-        <Route exact path="/middleware" component={MiddleWareRedux} />
-        <Route exact path="/login" component={Login} />
-        <Route exact path="/register" component={Register} />
-        <Route exact path="/detail/:maPhim" component={Detail} />
+        <HomeTemplate
+          exact
+          path="/home"
+          Component={HomePage}
+          MobileComponent={HomeMobile}
+        />
+        <HomeTemplate exact path="/about" Component={About} />
+        <HomeTemplate exact path="/contact" Component={Contact} />
+        <HomeTemplate exact path="/usestate" Component={DemoUseState} />
+        <HomeTemplate exact path="/baitapusestate" Component={BaiTapUseState} />
+        <HomeTemplate exact path="/demouseeffect" Component={DemoUseEffect} />
+        <HomeTemplate exact path="/demousememo" Component={DemoUseMemo} />
+        <HomeTemplate exact path="/demouseref" Component={DemoUseRef} />
+        <HomeTemplate exact path="/demohookredux" Component={DemoHookRedux} />
+        <HomeTemplate exact path="/democlassapi" Component={ClassApi} />
+        <HomeTemplate exact path="/demofuncapi" Component={FuncApi} />
+        <HomeTemplate exact path="/middleware" Component={MiddleWareRedux} />
+        <UserTemplate exact path="/login" Component={Login} />
+        <UserTemplate exact path="/register" Component={Register} />
+        <HomeTemplate exact path="/hoc" Component={HOC} />
+        <HomeTemplate exact path="/detail/:maPhim" Component={Detail} />
       </Switch>
     </BrowserRouter>
   );

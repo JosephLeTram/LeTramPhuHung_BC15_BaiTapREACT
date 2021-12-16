@@ -7,6 +7,7 @@ import { BTDatVeReducer } from "./reducers/BTDatVeReducer";
 import { FacebookAppReducer } from "./reducers/FacebookAppReducer";
 import { PhimReducer } from "./reducers/PhimReducer";
 import { QuanLyNguoiDungReducer } from "./reducers/QuanLyNguoiDungReducer";
+import { ModalReducer } from "./reducers/ModalReducer";
 import reduxThunk from "redux-thunk";
 
 const rootReducer = combineReducers({
@@ -27,6 +28,8 @@ const rootReducer = combineReducers({
   PhimReducer,
 
   QuanLyNguoiDungReducer,
+
+  ModalReducer,
 
   // ....stateBaiTap:
 });
