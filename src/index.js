@@ -6,6 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 // Gắn store redux vào app
 import { Provider } from "react-redux";
 import { store } from "./redux/configStore";
+import "antd/dist/antd.css"; // or 'antd/dist/antd.less'
 
 ReactDOM.render(
   <Provider store={store}>

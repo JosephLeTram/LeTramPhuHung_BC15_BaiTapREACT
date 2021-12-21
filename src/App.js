@@ -47,6 +47,7 @@ import Modal from "./pages/HOC/Modal";
 import { HomeTemplate } from "./templates/HomeTemplate";
 import { UserTemplate } from "./templates/UserTemplate";
 import HomeMobile from "./pages/Home/HomeMobile";
+import DemoAnt from "./pages/DemoAnt/DemoAnt";
 export const history = createBrowserHistory();
 
 function App() {
@@ -120,6 +121,7 @@ function App() {
         <UserTemplate exact path="/register" Component={Register} />
         <HomeTemplate exact path="/hoc" Component={HOC} />
         <HomeTemplate exact path="/detail/:maPhim" Component={Detail} />
+        <HomeTemplate exact path="/demoantdesign" Component={DemoAnt} />
       </Switch>
     </BrowserRouter>
   );

@@ -6,7 +6,7 @@ import { KEY_TOKEN_CYBERSOFT, TOKEN_CYBERSOFT } from "../../util/setting";
 export const getApiPhimAction = (maNhom = "GP01") => {
   return (dispatch) => {
     let promise = axios({
-      url: `http://movieapi.cyberlearn.vn/api/QuanLyPhim/LayDanhSachPhim?maNhom=${maNhom}`,
+      url: `https://movienew.cybersoft.edu.vn/api/QuanLyPhim/LayDanhSachPhim?maNhom=${maNhom}`,
       method: "GET",
     });
 

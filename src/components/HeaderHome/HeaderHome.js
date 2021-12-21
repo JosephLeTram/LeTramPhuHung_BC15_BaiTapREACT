@@ -65,6 +65,11 @@ export default function HeaderHome(props) {
               HOC
             </NavLink>
           </li>
+          <li className="nav-item">
+            <NavLink className="nav-link" to="/demoantdesign">
+              Demo Ant Design
+            </NavLink>
+          </li>
           <li className="nav-item dropdown">
             <NavLink
               className="nav-link dropdown-toggle"
